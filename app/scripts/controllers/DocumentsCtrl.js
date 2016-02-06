@@ -11,13 +11,47 @@ angular.module('pgpicApp')
   .controller('DocumentsCtrl', ['$scope', function ($scope) {
     $scope.documents = [
       {
-        name: 'Doc1'
+        nom: 'Doc1'
       },
       {
-        name: 'Doc2'
+        nom: 'Doc2'
       },
       {
-        name: 'Doc3'
+        nom: 'Doc3'
       }
     ];
+    $scope.doc = {
+      type: {
+        nom: 'nomType',
+        approbation: true,
+        diffusion: true
+      },
+      referentiel: {
+        nom: 'nomReferentiel'
+      },
+      reference: 'reference',
+      redacteur: {
+        nom: 'nomPartie',
+        prenom: 'prenomPartie'
+      },
+      dateRedaction: '2016-02-02',
+      verificateur: {
+        nom: 'nomPartie',
+        prenom: 'prenomPartie'
+      },
+      dateVerification: '2016-02-02',
+      validateur: {
+        nom: 'nomPartie',
+        prenom: 'prenomPartie'
+      },
+      dateValidation: '2016-02-02',
+      approbateur: {
+        nom: 'nomPartie',
+        prenom: 'prenomPartie'
+      },
+      dateApprobation: '2016-02-07',
+      dateDiffusion: '2016-02-07',
+      archivage: true
+    };
+    
   }]);

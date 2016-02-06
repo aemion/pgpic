@@ -2,8 +2,23 @@
 
 <h1>Documents</h1>
 
-<div class="well well-sm">
-  <div ng-repeat="document in documents"><pg-document document="document"></pg-document></div>
-</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Réference</th>
+      <th>Rédaction</th>
+      <th>Vérification</th>
+      <th>Validation</th>
+      <th>Approbation</th>
+      <th>Diffusion</th>
+      <th>Archivage</th>
+    </tr>
+  </thead>
+<!--<div ng-repeat="document in documents"><pg-document document="document"></pg-document></div>-->
+  <tbody>
+    <tr pg-document document="doc"></tr>
+    <tr pg-document document="doc"></tr>
+  </tbody>
+</table>
 
 </div>
