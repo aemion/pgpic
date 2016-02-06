@@ -19,6 +19,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/documents', {
+        templateUrl: 'views/documents.html',
+        controller: 'DocumentsCtrl',
+        controllerAs: 'documents'
+      })
       .otherwise({
         redirectTo: '/'
       });
