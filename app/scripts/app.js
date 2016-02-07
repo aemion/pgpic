@@ -25,6 +25,11 @@ angular
         controller: 'DocumentsCtrl',
         controllerAs: 'documents'
       })
+      .when('/reunions', {
+        templateUrl: 'views/reunions.html',
+        controller: 'ReunionsCtrl',
+        controllerAs: 'reunions'
+      })
       .otherwise({
         redirectTo: '/'
       });
