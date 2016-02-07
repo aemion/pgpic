@@ -3,7 +3,17 @@
 <h1>Reunions</h1>
 <uib-tabset>
 
-
+  <uib-tab heading="Effectuer une réunion">
+    <select ng-model="reunion.typeReunion" ng-options="type.nom for type in typesReunions"></select>
+    <label ng-repeat="personne in partiesInteressees">
+      <input type="checkbox" checklist-model="reunion.partiesInteressees" checklist-value="personne"/>
+      {{personne.prenom}} {{personne.nom}}
+    </label>
+    <a ng-click="start()">Démarrer la réunion</a>
+    <a ng-click="stop()">Terminer la réunion</a>
+    <pre>{{reunion | json}}</pre>
+    <div class="alert alert-danger" ng-show="reunion.debut && !reunion.fin"><i class="glyphicon glyphicon-warning-sign"></i> <strong>ATTENTION :</strong> La réunion en cours ne sera pas sauvegardée si vous changez de page avant de cliquer sur "Terminer la réunion".</div>
+  </uib-tab>
   <uib-tab heading="Consulter les réunions">
     <table class="table table-bordered">
       <thead>
@@ -33,9 +43,7 @@
     </table>
   </uib-tab>
   
-  <uib-tab heading="Effectuer une réunion">
-    
-  </uib-tab>
+  
 
 </uib-tabset>
 </div>

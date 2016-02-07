@@ -41,5 +41,25 @@ angular.module('pgpicApp')
       return Math.round((this.fin(reunion) - this.debut(reunion))/60000);
     };
 
+    $scope.start = function() {
+      if(this.reunion === undefined) {
+        alert('Impossible de commencer la réunion sans avoir rentré les informations demandées');
+        throw 'Reunion undefined';
+      }
+      if(this.reunion.debut != null)
+        throw 'meeting already started';
+      this.reunion.debut = new Date();
+    };
 
+    $scope.stop = function() {
+      if(this.reunion === undefined || this.reunion.debut == null)
+        throw 'meeting not started yet'
+      if(this.reunion.fin != null)
+        throw 'meeting already finished'
+      this.reunion.fin = new Date();
+      //this.reunion = {}; // save the reunion then destroy it
+    };
+$scope.reunion =  {};
+    $scope.partiesInteressees = [{nom: 'Emion', prenom: 'Alexandre'}, {nom: 'Personne', prenom: 'Autre'}];
+    $scope.typesReunions = [{nom: 'Réunion client'}, {nom: 'Réunion tuteur pédagogique'}]; 
   }]);
