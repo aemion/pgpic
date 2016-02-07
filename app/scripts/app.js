@@ -10,7 +10,8 @@
  */
 angular
   .module('pgpicApp', [
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap'
   ])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider

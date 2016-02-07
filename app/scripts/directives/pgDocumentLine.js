@@ -8,7 +8,7 @@ angular.module('pgpicApp')
       },
       restrict: 'A',
       templateUrl: 'views/directives/pgDocumentLine.html',
-      link: function($scope, element, attrs) {
+      link: function($scope) {
         $scope.isPassed = function(date) {
           return (new Date(date) < new Date());
         };

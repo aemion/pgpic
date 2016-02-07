@@ -1,24 +1,30 @@
 <div ng-controller="DocumentsCtrl">
 
 <h1>Documents</h1>
+<uib-tabset>
+  <uib-tab heading="Consulter les documents">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Réference</th>
+          <th>Rédaction</th>
+          <th>Vérification</th>
+          <th>Validation</th>
+          <th>Approbation</th>
+          <th>Diffusion</th>
+          <th>Archivage</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="document in documents" pg-document-line document="document"></tr>
+      </tbody>
+    </table>
+  </uib-tab>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Réference</th>
-      <th>Rédaction</th>
-      <th>Vérification</th>
-      <th>Validation</th>
-      <th>Approbation</th>
-      <th>Diffusion</th>
-      <th>Archivage</th>
-    </tr>
-  </thead>
-<!--<div ng-repeat="document in documents"><pg-document document="document"></pg-document></div>-->
-  <tbody>
-    <tr pg-document-line document="doc"></tr>
-    <tr pg-document-line document="doc"></tr>
-  </tbody>
-</table>
+  <uib-tab heading="Ajouter un document">Ajout de document</uib-tab>
+  <uib-tab heading="Créer un type de document">Création de type de document</uib-tab>
+  <uib-tab heading="Créer un réferentiel">Création de référentiel</uib-tab>
 
+</uib-tabset>
 </div>
