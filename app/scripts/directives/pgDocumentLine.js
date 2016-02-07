@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('pgpicApp')
-  .directive('pgDocument', function() {
+  .directive('pgDocumentLine', function() {
     return {
       scope : {
         document: '='
       },
       restrict: 'A',
-      templateUrl: 'views/directives/pgDocument.html',
+      templateUrl: 'views/directives/pgDocumentLine.html',
       link: function($scope, element, attrs) {
         $scope.isPassed = function(date) {
           return (new Date(date) < new Date());
