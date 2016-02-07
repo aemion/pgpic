@@ -5,31 +5,7 @@
 
 
   <uib-tab heading="Ajouter un document">
-    <form class="simple-form">
-      <label>Reference</label><input type="text" ng-model="document.reference"/><br/>
-      <label>Referentiel</label>
-      <select ng-model="document.referentiel" ng-init="referentiels=[{nom:'Qualité'}, {nom:'Développement'}, {nom:'Spécifications'}]" ng-options="referentiel.nom for referentiel in referentiels">
-      </select><br/>
-      <label>Type de document</label>
-      <select ng-model="document.type" ng-init="types=[{nom: 'CRTP', approbation: false, diffusion: false}, {nom: 'CRC', approbation: true, diffusion: false}]" ng-options="type.nom for type in types">
-      </select><br/>
-      <label>Rédacteur</label>
-      <select>
-        <option value="alexandre">Alexandre Emion</option>
-        <option value="autre">Autre étudiant</option>
-      </select><br/>
-      <label>Vérificateur</label>
-      <select>
-        <option value="alexandre">Alexandre Emion</option>
-        <option value="autre">Autre étudiant</option>
-      </select><br/>
-      <label>Validateur</label>
-      <select>
-        <option value="alexandre">Alexandre Emion</option>
-        <option value="autre">Autre étudiant</option>
-      </select><br/>
-    </form>
-    <p>{{document}}</p>
+    <pg-add-document parties-interessees="partiesInteressees" referentiels="referentiels" types-documents="typesDocuments"></pg-add-document>
   </uib-tab>
   
   <uib-tab heading="Consulter les documents">

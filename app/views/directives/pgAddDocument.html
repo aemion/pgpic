@@ -1,0 +1,20 @@
+<form class="simple-form">
+  <label>Reference</label><input type="text" ng-model="document.reference"/><br/>
+  <label>Referentiel</label>
+  <select ng-model="document.referentiel" ng-options="referentiel.nom for referentiel in referentiels">
+  </select><br/>
+  <label>Type de document</label>
+  <select ng-model="document.type" ng-options="type.nom for type in typesDocuments">
+  </select><br/>
+  <label>Rédacteur</label>
+  <select ng-model="document.redacteur" ng-options="partie.prenom + ' '+ partie.nom for partie in partiesInteressees">
+  </select><br/>
+  <label>Vérificateur</label>
+  <select ng-model="document.verificateur" ng-options="partie.prenom + ' '+ partie.nom for partie in partiesInteressees">
+  </select><br/>
+  <label>Validateur</label>
+  <select ng-model="document.validateur" ng-options="partie.prenom + ' '+ partie.nom for partie in partiesInteressees">
+  </select><br/>
+  <input type="submit" ng-click="" value="Ajouter"/>
+</form>
+<p>{{document}}</p>
