@@ -5,7 +5,32 @@
 
 
   <uib-tab heading="Consulter les réunions">
-    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Type de réunion</th>
+          <th>Date</th>
+          <th>Heure de début</th>
+          <th>Heure de fin</th>
+          <th>Durée (minutes)</th>
+          <th>Personnes présentes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="reunion in reunions">
+          <td>{{reunion.typeReunion.nom}}</td>
+          <td>{{debut(reunion) | date:'dd/MM/yyyy'}}</td>
+          <td>{{debut(reunion) | date:'HH:mm:ss'}}</td>
+          <td>{{fin(reunion) | date:'HH:mm:ss'}}</td>
+          <td>{{duree(reunion)}}</td>
+          <td>
+            <ul>
+              <li ng-repeat="personne in reunion.partiesInteressees">{{personne.prenom}} {{personne.nom}}</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </uib-tab>
   
   <uib-tab heading="Effectuer une réunion">
