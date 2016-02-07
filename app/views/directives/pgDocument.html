@@ -12,14 +12,14 @@
   {{document.validateur.prenom}} {{document.validateur.nom}}
 </td>
 
-<td ng-class="{'label-success': isApproved(document), 'label-danger': !isApproved(document)}">
+<td><span class="label" ng-class="{'label-success': isApproved(document), 'label-danger': !isApproved(document)}">
   <span class="glyphicon" aria-hidden="true" ng-class="{'glyphicon-ok': isApproved(document), 'glyphicon-remove': !isApproved(document)}"></span>
-</td>
+</span></td>
 
-<td ng-class="{'label-success': isSpreaded(document), 'label-danger': !isSpreaded(document)}">
+<td><span class="label" ng-class="{'label-success': isSpreaded(document), 'label-danger': !isSpreaded(document)}">
   <span class="glyphicon" aria-hidden="true" ng-class="{'glyphicon-ok': isSpreaded(document), 'glyphicon-remove': !isSpreaded(document)}"></span>
-</td>
+</span></td>
 
-<td ng-class="{'label-success': isArchived(document), 'label-danger': !isArchived(document)}">
+<td><span class="label" ng-class="{'label-success': isArchived(document), 'label-danger': !isArchived(document)}">
   <span class="glyphicon" aria-hidden="true" ng-class="{'glyphicon-ok': isArchived(document), 'glyphicon-remove': !isArchived(document)}"></span>
-</td>
+</span></td>
