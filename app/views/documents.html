@@ -2,10 +2,6 @@
 
 <h1>Documents</h1>
 <uib-tabset>
-  <uib-tab heading="Ajouter un document">
-    <pg-add-document parties-interessees="partiesInteressees" referentiels="referentiels" types-documents="typesDocuments"></pg-add-document>
-  </uib-tab>
-  
   <uib-tab heading="Consulter les documents">
     <table class="table table-bordered">
       <thead>
@@ -24,6 +20,10 @@
         <tr ng-repeat="document in documents" pg-document-line document="document"></tr>
       </tbody>
     </table>
+  </uib-tab>
+  
+  <uib-tab heading="Ajouter un document">
+    <pg-add-document parties-interessees="partiesInteressees" referentiels="referentiels" types-documents="typesDocuments"></pg-add-document>
   </uib-tab>
 
   <uib-tab heading="Créer un type de document">
