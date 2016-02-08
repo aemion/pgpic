@@ -61,7 +61,7 @@ angular.module('pgpicApp')
       this.reunion.fin = new Date();
       //this.reunion = {}; // save the reunion then destroy it
     };
-//$scope.reunion =  {};
+    $scope.reunion =  {partiesInteressees:[]};
     $scope.partiesInteressees = [{nom: 'Emion', prenom: 'Alexandre'}, {nom: 'Personne', prenom: 'Autre'}];
     $scope.typesReunions = [{nom: 'Réunion client'}, {nom: 'Réunion tuteur pédagogique'}]; 
   }]);

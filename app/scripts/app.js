@@ -11,7 +11,8 @@
 angular
   .module('pgpicApp', [
     'ngRoute',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'checklist-model'
   ])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
