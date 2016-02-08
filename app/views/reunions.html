@@ -9,10 +9,16 @@
       <input type="checkbox" checklist-model="reunion.partiesInteressees" checklist-value="personne"/>
       {{personne.prenom}} {{personne.nom}}
     </label>
-    <a ng-click="start()">Démarrer la réunion</a>
-    <a ng-click="stop()">Terminer la réunion</a>
-    <pre>{{reunion | json}}</pre>
+
+    <hr/>
+
+    <a class ="btn btn-primary" ng-click="start()" ng-hide="reunion.debut"  ng-class="{disabled: this.reunion === undefined || this.reunion.typeReunion === undefined}">Démarrer la réunion</a>
+    <a class ="btn btn-primary" ng-click="stop()" ng-show="reunion.debut && !reunion.fin">Terminer la réunion</a>
+    
     <div class="alert alert-danger" ng-show="reunion.debut && !reunion.fin"><i class="glyphicon glyphicon-warning-sign"></i> <strong>ATTENTION :</strong> La réunion en cours ne sera pas sauvegardée si vous changez de page avant de cliquer sur "Terminer la réunion".</div>
+
+    <pre>{{reunion | json}}</pre>
+
   </uib-tab>
   <uib-tab heading="Consulter les réunions">
     <table class="table table-bordered">

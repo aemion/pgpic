@@ -42,24 +42,26 @@ angular.module('pgpicApp')
     };
 
     $scope.start = function() {
-      if(this.reunion === undefined) {
-        alert('Impossible de commencer la réunion sans avoir rentré les informations demandées');
-        throw 'Reunion undefined';
+      if(this.reunion === undefined || this.reunion.typeReunion === undefined) {
+        throw 'Can\'t start meeting';
       }
-      if(this.reunion.debut != null)
-        throw 'meeting already started';
+      if(this.reunion.debut !== undefined) {
+        throw 'Meeting already started';
+      }
       this.reunion.debut = new Date();
     };
 
     $scope.stop = function() {
-      if(this.reunion === undefined || this.reunion.debut == null)
-        throw 'meeting not started yet'
-      if(this.reunion.fin != null)
-        throw 'meeting already finished'
+      if(this.reunion === undefined || this.reunion.debut === undefined) {
+        throw 'Meeting not started yet';
+      }
+      if(this.reunion.fin !== undefined) {
+        throw 'Meeting already finished';
+      }
       this.reunion.fin = new Date();
       //this.reunion = {}; // save the reunion then destroy it
     };
-$scope.reunion =  {};
+//$scope.reunion =  {};
     $scope.partiesInteressees = [{nom: 'Emion', prenom: 'Alexandre'}, {nom: 'Personne', prenom: 'Autre'}];
     $scope.typesReunions = [{nom: 'Réunion client'}, {nom: 'Réunion tuteur pédagogique'}]; 
   }]);
