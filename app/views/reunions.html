@@ -12,8 +12,8 @@
 
     <hr/>
 
-    <a class ="btn btn-primary" ng-click="start()" ng-hide="reunion.debut"  ng-class="{disabled: this.reunion === undefined || this.reunion.typeReunion === undefined}">Démarrer la réunion</a>
-    <a class ="btn btn-primary" ng-click="stop()" ng-show="reunion.debut && !reunion.fin">Terminer la réunion</a>
+    <button class ="btn btn-primary" ng-click="start()" ng-hide="reunion.debut"  ng-class="{disabled: this.reunion === undefined || this.reunion.typeReunion === undefined}" uib-popover="Vous devez définir le type de réunion pour la démarrer" popover-is-open="isOpen && this.reunion.typeReunion === undefined" ng-mouseenter="isOpen = true" ng-mouseleave="isOpen = false">Démarrer la réunion</button>
+    <button class ="btn btn-primary" ng-click="stop()" ng-show="reunion.debut && !reunion.fin">Terminer la réunion</button>
     
     <div class="alert alert-danger" ng-show="reunion.debut && !reunion.fin"><i class="glyphicon glyphicon-warning-sign"></i> <strong>ATTENTION :</strong> La réunion en cours ne sera pas sauvegardée si vous changez de page avant de cliquer sur "Terminer la réunion".</div>
 
