@@ -12,6 +12,7 @@
           <th>Heure de fin</th>
           <th>Durée (minutes)</th>
           <th>Personnes présentes</th>
+          <th>Compte rendu</th>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +26,10 @@
             <ul>
               <li ng-repeat="personne in reunion.partiesInteressees">{{personne.prenom}} {{personne.nom}}</li>
             </ul>
+          </td>
+          <td> <!-- create a directive -->
+            <span ng-show="reunion.typeReunion.typeCR === null">Non nécessaire</span>
+            <a ng-hide="reunion.typeReunion.typeCR === null">Compte-rendu</a>
           </td>
         </tr>
       </tbody>
@@ -40,7 +45,7 @@
 
     <hr/>
 
-    <button class ="btn btn-primary" ng-click="start()" ng-hide="reunion.debut"  ng-class="{disabled: this.reunion === undefined || this.reunion.typeReunion === undefined}" uib-popover="Vous devez définir le type de réunion pour la démarrer" popover-is-open="isOpen && this.reunion.typeReunion === undefined" ng-mouseenter="isOpen = true" ng-mouseleave="isOpen = false">Démarrer la réunion</button>
+    <button class ="btn btn-primary" ng-click="start()" ng-hide="reunion.debut"  ng-class="{disabled: this.reunion === undefined || this.reunion.typeReunion === undefined}" uib-popover="Vous devez définir le type de réunion pour la démarrer" popover-is-open="isOpen && this.reunion.typeReunion === undefined" ng-mouseenter="isOpen = true" ng-mouseleave="isOpen = false">Démarrer la réunion</button> <!-- create a directive -->
     <button class ="btn btn-primary" ng-click="stop()" ng-show="reunion.debut && !reunion.fin">Terminer la réunion</button>
     
     <div class="alert alert-danger" ng-show="reunion.debut && !reunion.fin"><i class="glyphicon glyphicon-warning-sign"></i> <strong>ATTENTION :</strong> La réunion en cours ne sera pas sauvegardée si vous changez de page avant de cliquer sur "Terminer la réunion".</div>
