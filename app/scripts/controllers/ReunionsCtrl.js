@@ -22,8 +22,8 @@ angular.module('pgpicApp')
             prenom: 'Alexandre'
           },
           {
-            nom: 'Emion',
-            prenom: 'Thibaut'
+            nom: 'Personne',
+            prenom: 'Autre'
           }
         ]
       }

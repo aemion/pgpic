@@ -2,8 +2,6 @@
 
 <h1>Documents</h1>
 <uib-tabset>
-
-
   <uib-tab heading="Ajouter un document">
     <pg-add-document parties-interessees="partiesInteressees" referentiels="referentiels" types-documents="typesDocuments"></pg-add-document>
   </uib-tab>
@@ -27,9 +25,29 @@
       </tbody>
     </table>
   </uib-tab>
-  
-  <uib-tab heading="Créer un type de document">Création de type de document</uib-tab>
-  <uib-tab heading="Créer un réferentiel">Création de référentiel</uib-tab>
 
+  <uib-tab heading="Créer un type de document">
+    <form class="simple-form">
+      <label>Type de document</label><input type="text" ng-model="type.nom"/><br/>
+      
+      <label>Approbation nécessaire ?
+        <input type="checkbox" ng-model="type.approbation"/>
+      </label> <br/>
+      <label>Diffusion nécessaire ?
+        <input type="checkbox" ng-model="type.diffusion"/>
+      </label> <br/>
+      <input type="submit" ng-click="" value="Créer"/>
+    </form>
+    <pre>{{type | json }}</pre>
+  </uib-tab>
+
+  <uib-tab heading="Créer un référentiel">
+    <form class="simple-form">
+      <label>Nom du référentiel</label><input type="text" ng-model="referentiel.nom"/><br/>
+     
+      <input type="submit" ng-click="" value="Créer"/>
+    </form>
+    <pre>{{referentiel | json }}</pre>
+  </uib-tab>
 </uib-tabset>
 </div>
