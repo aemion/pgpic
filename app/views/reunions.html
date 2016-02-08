@@ -27,7 +27,7 @@
               <li ng-repeat="personne in reunion.partiesInteressees">{{personne.prenom}} {{personne.nom}}</li>
             </ul>
           </td>
-          <td> <!-- create a directive -->
+          <td> <!-- create a directive --> 
             <span ng-show="reunion.typeReunion.typeCR === null">Non nécessaire</span>
             <a ng-hide="reunion.typeReunion.typeCR === null">Compte-rendu</a>
           </td>
