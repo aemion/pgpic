@@ -41,4 +41,13 @@ angular.module('pgpicApp')
     this.getDocuments = function() {
       return this.documents;
     };
+    
+    this.getDocument = function(referenceDocument) {
+      for (var i = 0; i < this.documents.length;i++) {
+        if(this.documents[i].reference === referenceDocument) {
+          return this.documents[i];
+        }
+      }
+    };
+
   });
