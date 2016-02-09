@@ -1,5 +1,13 @@
 'use strict';
 
+/**
+ * @ngdoc function
+ * @name pgpicApp.directive:pgDocumentLine
+ * @description
+ * # pgDocumentLine
+ * This directive is one table line for one document. This line indicates the state of the document procedure.
+ */
+
 angular.module('pgpicApp')
   .directive('pgDocumentLine', function() {
     return {
