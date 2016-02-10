@@ -10,6 +10,8 @@
 angular.module('pgpicApp')
   .controller('DocumentsCtrl', ['$scope', 'DocumentsService', function ($scope, DocumentsService) {
     $scope.documents = DocumentsService.getDocuments();
+
+    $scope.type = {approbation: false, diffusion: false};
     
     $scope.referentiels = [{nom:'Qualité'}, {nom:'Développement'}, {nom:'Spécifications'}];
     $scope.typesDocuments = [{nom: 'CRTP', approbation: false, diffusion: false}, {nom: 'CRC', approbation: true, diffusion: false}];
