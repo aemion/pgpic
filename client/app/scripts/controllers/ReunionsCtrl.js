@@ -24,7 +24,7 @@ angular.module('pgpicApp')
     };
 
     $scope.start = function() {
-      if(this.reunion === undefined || this.reunion.typeReunion === undefined) {
+      if(!this.canStart(this.reunion)) {
         throw 'Can\'t start meeting';
       }
       if(this.reunion.debut !== undefined) {

@@ -66,6 +66,6 @@ angular.module('pgpicApp')
 
     this.getTypes = function() {
         return this.types;
-    }
+    };
 
   });
