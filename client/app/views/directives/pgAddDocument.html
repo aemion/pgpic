@@ -19,7 +19,7 @@
     <label ng-show="document.type.approbation">Approbateur</label>
     <select ng-model="document.approbateur" ng-options="partie.prenom + ' '+ partie.nom for partie in partiesInteressees" ng-show="document.type.approbation">
     </select><br/>
-    <input type="submit" ng-click="" value="Ajouter"/>
+    <input type="submit" ng-click="create()" value="Ajouter" class="btn btn-default"/>
   </form>
 </div>
 <pre>{{document | json}}</pre>

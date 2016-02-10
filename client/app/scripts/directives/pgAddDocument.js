@@ -17,7 +17,6 @@ angular.module('pgpicApp')
         typesDocuments: '='
       },
       restrict: 'EA',
-      templateUrl: 'views/directives/pgAddDocument.html',
-      
+      templateUrl: 'views/directives/pgAddDocument.html'      
     };
   });

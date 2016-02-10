@@ -17,4 +17,9 @@ angular.module('pgpicApp')
     $scope.typesDocuments = DocumentsService.getTypes();
     $scope.partiesInteressees = [{nom: 'Emion', prenom: 'Alexandre'}, {nom: 'Personne', prenom: 'Autre'}];
 
+    $scope.createType  = function() {
+      DocumentsService.createType(this.type);
+      $scope.type = {approbation: false, diffusion: false};
+    };
+
   }]);
