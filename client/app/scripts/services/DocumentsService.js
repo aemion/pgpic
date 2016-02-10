@@ -36,6 +36,35 @@ angular.module('pgpicApp')
         dateApprobation: '2016-02-07',
         dateDiffusion: '2016-02-07',
         archivage: true
+      },
+
+      {
+        type: {
+          nom: 'nomType',
+          approbation: true,
+          diffusion: true
+        },
+        referentiel: {
+          nom: 'nomReferentiel'
+        },
+        reference: 'otherReference',
+        redacteur: {
+          nom: 'nomPartie',
+          prenom: 'prenomPartie'
+        },
+        verificateur: {
+          nom: 'nomPartie',
+          prenom: 'prenomPartie'
+        },
+        validateur: {
+          nom: 'nomPartie',
+          prenom: 'prenomPartie'
+        },
+        approbateur: {
+          nom: 'nomPartie',
+          prenom: 'prenomPartie'
+        },
+        archivage: false
       }
     ];
 
