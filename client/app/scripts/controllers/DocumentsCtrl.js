@@ -12,7 +12,8 @@ angular.module('pgpicApp')
     $scope.documents = DocumentsService.getDocuments();
 
     $scope.type = {approbation: false, diffusion: false};
-    
+    $scope.referentiel = {};
+
     $scope.referentiels = DocumentsService.getReferentiels();
     $scope.typesDocuments = DocumentsService.getTypes();
     $scope.partiesInteressees = [{nom: 'Emion', prenom: 'Alexandre'}, {nom: 'Personne', prenom: 'Autre'}];
@@ -20,6 +21,11 @@ angular.module('pgpicApp')
     $scope.createType  = function() {
       DocumentsService.createType(this.type);
       $scope.type = {approbation: false, diffusion: false};
+    };
+
+    $scope.createReferentiel = function() {
+      DocumentsService.createReferentiel(this.referentiel);
+      $scope.referentiel = {};
     };
 
   }]);
