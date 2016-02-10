@@ -8,7 +8,7 @@
  * Controller for the meeting part of pgpicApp
  */
 angular.module('pgpicApp')
-  .controller('ReunionsCtrl', ['$scope', 'ReunionsService', function ($scope, ReunionsService) {
+  .controller('ReunionsCtrl', ['$scope', 'ReunionsService', 'DocumentsService', function ($scope, ReunionsService, DocumentsService) {
     $scope.reunions = ReunionsService.getReunions();
 
     $scope.debut = function(reunion) {
@@ -51,7 +51,7 @@ angular.module('pgpicApp')
     $scope.reunion =  {partiesInteressees:[]};
     $scope.partiesInteressees = [{nom: 'Emion', prenom: 'Alexandre'}, {nom: 'Personne', prenom: 'Autre'}];
     $scope.typesReunions = ReunionsService.getTypes();
-    $scope.typesDocuments = [{nom: 'CRTP', approbation: false, diffusion: false}, {nom: 'CRC', approbation: true, diffusion: false}];
+    $scope.typesDocuments = DocumentsService.getTypes();
 
 
   }]);

@@ -38,6 +38,20 @@ angular.module('pgpicApp')
         archivage: true
       }
     ];
+
+    this.types = [
+      {
+        nom: 'CRTP', 
+        approbation: false, 
+        diffusion: false
+      }, 
+      {
+        nom: 'CRC', 
+        approbation: true, 
+        diffusion: false
+      }
+    ];
+
     this.getDocuments = function() {
       return this.documents;
     };
@@ -49,5 +63,9 @@ angular.module('pgpicApp')
         }
       }
     };
+
+    this.getTypes = function() {
+        return this.types;
+    }
 
   });
