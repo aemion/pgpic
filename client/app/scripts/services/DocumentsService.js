@@ -114,7 +114,12 @@ angular.module('pgpicApp')
     };
 
     this.deleteDocument = function(referenceDocument) {
-      return referenceDocument;
+      for (var i = 0; i < this.documents.length;i++) {
+        if(this.documents[i].reference === referenceDocument) {
+          this.documents.pop(i);
+          return;
+        }
+      }
     };
 
     this.getTypes = function() {
