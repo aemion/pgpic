@@ -28,8 +28,8 @@
             </ul>
           </td>
           <td> <!-- create a directive --> 
-            <span ng-show="reunion.typeReunion.typeCR === null">Non nécessaire</span>
-            <a ng-hide="reunion.typeReunion.typeCR === null">Compte-rendu</a>
+            <span ng-show="reunion.typeReunion.typeCR === undefined">Non nécessaire</span>
+            <a ng-hide="reunion.typeReunion.typeCR === undefined">Compte-rendu</a>
           </td>
         </tr>
       </tbody>
@@ -52,7 +52,19 @@
 
     <pre>{{reunion | json}}</pre>
   </uib-tab>
-  
-  <uib-tab heading="Créer un type de réunion">Création de type de réunion</uib-tab>
+
+   <uib-tab heading="Créer un type de réunion">
+    <form class="simple-form">
+      <label>Type de réunion</label><input type="text" ng-model="type.nom"/><br/>
+      <label>Compte-rendu nécessaire ?
+        <input type="checkbox" ng-model="crNecessaire" ng-click="type.typeCR = undefined"/>
+      </label> <br/>
+      <label ng-show="crNecessaire">Type de CR</label>
+      <select ng-model="type.typeCR" ng-options="typeDoc.nom for typeDoc in typesDocuments" ng-show="crNecessaire">
+      </select><br/>
+      <input type="submit" ng-click="" value="Créer"/>
+    </form>
+    <pre>{{type | json}}</pre>
+  </uib-tab> 
 </uib-tabset>
 </div>

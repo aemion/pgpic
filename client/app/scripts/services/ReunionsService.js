@@ -6,8 +6,7 @@ angular.module('pgpicApp')
     this.reunions = [
       {
         typeReunion: {
-          nom: 'Reunion tuteur pédagogique',
-          typeCR: null
+          nom: 'Reunion tuteur pédagogique'
         },
         debut: '2016-02-07T15:04:45', // add hour
         fin: '2016-02-07T15:48:49', // add hour
