@@ -93,8 +93,23 @@ angular.module('pgpicApp')
       }
     };
 
+    this.createDocument = function(document) {
+      this.documents.push(document);
+    };
+
+    this.updateDocument = function(referenceDocument, document) {
+      return document+referenceDocument;
+    };
+
+    this.deleteDocument = function(referenceDocument) {
+      return referenceDocument;
+    };
+
     this.getTypes = function() {
         return this.types;
     };
 
+    this.createType = function(type) {
+      this.types.push(type);
+    };
   });
