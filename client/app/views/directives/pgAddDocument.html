@@ -1,6 +1,6 @@
 <div class="well">
   <form class="simple-form form-horizontal">
-    <label>Reference</label><input type="text" ng-model="document.reference"/><br/>
+    <label>Reference</label><input type="text" ng-model="document.reference" required/><br/>
     <label>Referentiel</label>
     <select ng-model="document.referentiel" ng-options="referentiel.nom for referentiel in referentiels">
     </select><br/>

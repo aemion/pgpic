@@ -28,7 +28,7 @@
 
   <uib-tab heading="Créer un type de document">
     <form class="simple-form">
-      <label>Type de document</label><input type="text" ng-model="type.nom"/><br/>
+      <label>Type de document</label><input type="text" ng-model="type.nom" required/><br/>
       
       <label>Approbation nécessaire ?
         <input type="checkbox" ng-model="type.approbation"/>
@@ -43,7 +43,7 @@
 
   <uib-tab heading="Créer un référentiel">
     <form class="simple-form">
-      <label>Nom du référentiel</label><input type="text" ng-model="referentiel.nom"/><br/>
+      <label>Nom du référentiel</label><input type="text" ng-model="referentiel.nom" required/><br/>
      
       <input type="submit" ng-click="createReferentiel()" value="Créer"/>
     </form>
