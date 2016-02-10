@@ -110,7 +110,11 @@ angular.module('pgpicApp')
     };
 
     this.updateDocument = function(referenceDocument, document) {
-      return document+referenceDocument;
+      for (var i = 0; i < this.documents.length;i++) {
+        if(this.documents[i].reference === referenceDocument) {
+          this.documents[i] = document;
+        }
+      }
     };
 
     this.deleteDocument = function(referenceDocument) {

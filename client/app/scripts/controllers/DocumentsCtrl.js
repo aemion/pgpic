@@ -28,4 +28,10 @@ angular.module('pgpicApp')
       $scope.referentiel = {};
     };
 
+    $scope.test = function() {
+      var newDoc = DocumentsService.getDocument('otherReference');
+      newDoc.dateRedaction = '2016-02-05';
+      DocumentsService.updateDocument('otherReference', newDoc);
+    };
+
   }]);
