@@ -50,7 +50,7 @@ angular.module('pgpicApp')
 
     $scope.reunion =  {partiesInteressees:[]};
     $scope.partiesInteressees = [{nom: 'Emion', prenom: 'Alexandre'}, {nom: 'Personne', prenom: 'Autre'}];
-    $scope.typesReunions = [{nom: 'Réunion client', typeCR: {nom: 'CRC', approbation: true, diffusion: false}}, {nom: 'Réunion tuteur pédagogique'}]; 
+    $scope.typesReunions = ReunionsService.getTypes();
     $scope.typesDocuments = [{nom: 'CRTP', approbation: false, diffusion: false}, {nom: 'CRC', approbation: true, diffusion: false}];
 
 

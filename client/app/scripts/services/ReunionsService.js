@@ -40,9 +40,27 @@ angular.module('pgpicApp')
         ]
       }
     ];
+
+    this.types = [
+      {
+        nom: 'Réunion client',
+        typeCR: {
+          nom: 'CRC', 
+          approbation: true, 
+          diffusion: false
+        }
+      }, 
+      {
+        nom: 'Réunion tuteur pédagogique'
+      }
+    ]; 
     
     this.getReunions = function() {
       return this.reunions;
+    };
+
+    this.getTypes = function() {
+      return this.types;
     };
 
   });
