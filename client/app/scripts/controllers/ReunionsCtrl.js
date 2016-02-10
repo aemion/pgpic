@@ -44,6 +44,10 @@ angular.module('pgpicApp')
       //this.reunion = {}; // save the reunion then destroy it
     };
 
+    $scope.canStart = function(reunion) {
+      return (reunion !== undefined && reunion.typeReunion !== undefined);
+    };
+
     $scope.reunion =  {partiesInteressees:[]};
     $scope.partiesInteressees = [{nom: 'Emion', prenom: 'Alexandre'}, {nom: 'Personne', prenom: 'Autre'}];
     $scope.typesReunions = [{nom: 'Réunion client', typeCR: {nom: 'CRC', approbation: true, diffusion: false}}, {nom: 'Réunion tuteur pédagogique'}]; 
