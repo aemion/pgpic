@@ -13,7 +13,7 @@ angular.module('pgpicApp')
 
     $scope.type = {approbation: false, diffusion: false};
     
-    $scope.referentiels = [{nom:'Qualité'}, {nom:'Développement'}, {nom:'Spécifications'}];
+    $scope.referentiels = DocumentsService.getReferentiels();
     $scope.typesDocuments = DocumentsService.getTypes();
     $scope.partiesInteressees = [{nom: 'Emion', prenom: 'Alexandre'}, {nom: 'Personne', prenom: 'Autre'}];
 

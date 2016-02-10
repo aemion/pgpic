@@ -81,6 +81,18 @@ angular.module('pgpicApp')
       }
     ];
 
+    this.referentiels = [
+      {
+        nom:'Qualité'
+      }, 
+      {
+        nom:'Développement'
+      }, 
+      {
+        nom:'Spécifications'
+      }
+    ];
+
     this.getDocuments = function() {
       return this.documents;
     };
@@ -111,5 +123,13 @@ angular.module('pgpicApp')
 
     this.createType = function(type) {
       this.types.push(type);
+    };
+
+    this.getReferentiels = function() {
+      return this.referentiels;
+    };
+
+    this.createReferentiel = function(referentiel) {
+      this.referentiels.push(referentiel);
     };
   });
