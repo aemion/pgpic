@@ -2,6 +2,9 @@
 
 <h1>Reunions</h1>
 <uib-tabset>
+
+   
+
   <uib-tab heading="Consulter les réunions">
     <table class="table table-bordered">
       <thead>
@@ -52,18 +55,31 @@
 
     <pre>{{reunion | json}}</pre>
   </uib-tab>
+  
+  <uib-tab heading="Créer un type de réunion">
+    <div class="well">
+      <form class="simple-form form-horizontal">
+        <div class="form-group">
+        <label class="col-sm-2">Type de réunion</label><div class="col-sm-3"><input type="text" ng-model="type.nom" class="form-control"/></div>
+        </div>
 
-   <uib-tab heading="Créer un type de réunion">
-    <form class="simple-form">
-      <label>Type de réunion</label><input type="text" ng-model="type.nom"/><br/>
-      <label>Compte-rendu nécessaire ?
-        <input type="checkbox" ng-model="crNecessaire" ng-click="type.typeCR = undefined"/>
-      </label> <br/>
-      <label ng-show="crNecessaire">Type de CR</label>
-      <select ng-model="type.typeCR" ng-options="typeDoc.nom for typeDoc in typesDocuments" ng-show="crNecessaire">
-      </select><br/>
-      <input type="submit" ng-click="" value="Créer"/>
-    </form>
+        <div class="form-group">
+        <label class="col-sm-2" for="crNeeded">Compte-rendu nécessaire ?</label> 
+        <div class="col-sm-1">
+          <input id="crNeeded" type="checkbox" ng-model="crNecessaire" ng-click="type.typeCR = undefined" class="form-control"/>
+        </div>
+        </div>
+        
+        <div class="form-group">
+        <label ng-show="crNecessaire" class="col-sm-2">Type de CR</label>
+        <div class="col-sm-3">
+          <select ng-model="type.typeCR" ng-options="typeDoc.nom for typeDoc in typesDocuments" ng-show="crNecessaire" class="form-control"></select>
+          </div>
+        </div>
+
+        <input type="submit" ng-click="" value="Créer" class="btn btn-default"/>
+      </form>
+    </div>
     <pre>{{type | json}}</pre>
   </uib-tab> 
 </uib-tabset>
