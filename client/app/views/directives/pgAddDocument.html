@@ -15,6 +15,9 @@
   <label>Validateur</label>
   <select ng-model="document.validateur" ng-options="partie.prenom + ' '+ partie.nom for partie in partiesInteressees">
   </select><br/>
+  <label ng-show="document.type.approbation">Approbateur</label>
+  <select ng-model="document.approbateur" ng-options="partie.prenom + ' '+ partie.nom for partie in partiesInteressees" ng-show="document.type.approbation">
+  </select><br/>
   <input type="submit" ng-click="" value="Ajouter"/>
 </form>
 <pre>{{document | json}}</pre>
