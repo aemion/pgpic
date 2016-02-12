@@ -38,6 +38,14 @@ angular.module('pgpicApp')
         $scope.isArchived = function(document) {
           return document.archivage;
         };
+
+        $scope.redact = function(document) {
+          if(this.redactionChecked === true) {
+            document.dateRedaction = new Date();
+          } else {
+            document.dateRedaction = undefined;
+          }
+        };
       }
     };
   });

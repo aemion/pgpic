@@ -1,7 +1,7 @@
 <td><a>{{document.reference}}</a></td>
 
 <td ng-class="{'label-success': isRedacted(document), 'label-danger': !isRedacted(document)}">
-  {{document.redacteur.prenom}} {{document.redacteur.nom}}
+  {{document.redacteur.prenom}} {{document.redacteur.nom}} <input type="checkbox" ng-click="redact(document)" ng-model="redactionChecked"/>
 </td>
 
 <td ng-class="{'label-success': isVerificated(document), 'label-danger': !isVerificated(document)}">
