@@ -9,7 +9,7 @@
 </td>
 
 <td ng-class="{'label-success': isValidated(document), 'label-danger': !isValidated(document)}">
-  {{document.validateur.prenom}} {{document.validateur.nom}}
+  {{document.validateur.prenom}} {{document.validateur.nom}} <input type="checkbox" ng-click="validate(document)" ng-model="validationChecked"/>
 </td>
 
 <td><span class="label" ng-class="{'label-success': isApproved(document), 'label-danger': !isApproved(document)}">
