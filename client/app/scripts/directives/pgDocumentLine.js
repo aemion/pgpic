@@ -47,6 +47,14 @@ angular.module('pgpicApp')
           }
         };
 
+        $scope.verify = function(document) {
+          if(this.verificationChecked === true) {
+            document.dateVerification = new Date();
+          } else {
+            document.dateVerification = undefined;
+          }
+        };
+
         $scope.validate = function(document) {
           if(this.validationChecked === true) {
             document.dateValidation = new Date();

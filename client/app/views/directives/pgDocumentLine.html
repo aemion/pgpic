@@ -5,7 +5,7 @@
 </td>
 
 <td ng-class="{'label-success': isVerificated(document), 'label-danger': !isVerificated(document)}">
-  {{document.verificateur.prenom}} {{document.verificateur.nom}}
+  {{document.verificateur.prenom}} {{document.verificateur.nom}} <input type="checkbox" ng-click="verify(document)" ng-model="verificationChecked"/>
 </td>
 
 <td ng-class="{'label-success': isValidated(document), 'label-danger': !isValidated(document)}">
